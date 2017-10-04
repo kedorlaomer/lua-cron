@@ -30,7 +30,7 @@ job1 = {
     callback = function()
         print "Going to work…"
     end,
-    hour = "9"
+    hour = "9",
     minute = "15",
     day = "1-5"
 }
