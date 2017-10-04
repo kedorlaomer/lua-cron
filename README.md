@@ -20,7 +20,7 @@ An unconstrained job runs every minute.
 Don't do funny things as e. g. constraints that never become
 true.
 
-Example
+## Example
 
 ```lua
 
@@ -46,3 +46,9 @@ job2 = {
 
 cron.cron{job1, job2}
 ```
+
+## Requirements
+
+*   [Luaposix](http://luaforge.net/projects/luaposix/)
+*   granularity of `os.time` has to be at least seconds
+*   for testing: [Luaunit](http://luaforge.net/projects/luaunit/)
