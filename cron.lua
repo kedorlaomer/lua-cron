@@ -184,21 +184,6 @@ local function cron(entries, verbose)
     end
 end
 
-entry1 = {
-    callback = function()
-        print("Tick…")
-    end
-}
-
-entry2 = {
-    callback = function()
-        print("Tick 2…")
-    end,
-    minute = "17,19,21,41,43,45,47,49,51,53,55"
-}
-
-cron({entry1, entry2}, true)
-
 module.cron = cron
 
 return module
