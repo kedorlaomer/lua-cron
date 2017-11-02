@@ -143,11 +143,9 @@ local function cron(entries, verbose)
     -- main loop
     while true do
         -- find next entry to run
-        local min = 2^64 
+        local min = math.huge
         for i = 1, #extra do
-            if extra[i].next_activation < min then
-                min = extra[i].next_activation
-            end
+            min = math.min(min, extra[i].next_activation)
         end
 
         -- list of indices into entries that are to be run next
